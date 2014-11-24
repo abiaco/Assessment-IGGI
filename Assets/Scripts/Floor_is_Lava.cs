@@ -21,15 +21,22 @@ private Player_Control player;
 		}
 	}
 */
-/*	void OnTriggerStay(Collider other) {
-		if ((other.gameObject.tag == "Player") && experiment)
-		{
-			Destroy(other.gameObject,TIME_LEFT);
+	void OnTriggerStay(Collider other) {
+        if ((other.gameObject.tag == "Player") && experiment)
+        {
+            Player_Control player = (Player_Control)other.GetComponent("Player_Control");
+            player.health -= player.health / 3;
+            if (player.health < 1)
+            {
+                player.healthText.text = " ";
+                player.gameObject.SetActive(false);
+                Destroy(player);
+            }
 			
-		}
-	}
-*/
-    void OnCollisionStay(Collision other)
+        }
+    }
+
+void OnCollisionStay(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
