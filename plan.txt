@@ -1,0 +1,7 @@
+->simple platformer
+->player = ball
+-> player can jump around, maybe shoot? destroy opponents
+->obstacles: disappearing ground, mines, enemy objects moving in set
+directions (pendulum or whatever)
+-> enemy balls hunting the player
+
