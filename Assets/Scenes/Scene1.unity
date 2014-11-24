@@ -235,6 +235,7 @@ Transform:
   m_Children:
   - {fileID: 142656686}
   - {fileID: 1673597316}
+  - {fileID: 1147553656}
   m_Father: {fileID: 0}
   m_RootOrder: 10
 --- !u!1 &226305345
@@ -1121,6 +1122,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &1147553655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+  m_PrefabInternal: {fileID: 1568337751}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1147553656}
+  m_Layer: 0
+  m_Name: TeleportDestination2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1147553656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+  m_PrefabInternal: {fileID: 1568337751}
+  m_GameObject: {fileID: 1147553655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.19649911, y: -3.2606976, z: 7.45640802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158122829}
+  m_RootOrder: 2
 --- !u!1 &1409853946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1269,54 @@ Prefab:
   m_RootGameObject: {fileID: 142656685}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &1568337751
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 158122829}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.19649911
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.2606976
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.45640802
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+      propertyPath: m_Name
+      value: TeleportDestination2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 496c4b902892d4637a423bcbeda684bc, type: 2}
+  m_RootGameObject: {fileID: 1147553655}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1673597315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,7 +1332,7 @@ GameObject:
   - 114: {fileID: 1673597317}
   m_Layer: 0
   m_Name: TeleportStart1
-  m_TagString: Pickup
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,7 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51de6483dec9a1a43ad15336eca8c66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportPoint: {fileID: 142656685}
+  teleportPoint: {fileID: 1147553655}
 --- !u!114 &1673597318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,7 +1641,7 @@ Prefab:
     - target: {fileID: 11400002, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
       propertyPath: teleportPoint
       value: 
-      objectReference: {fileID: 142656685}
+      objectReference: {fileID: 1147553655}
     - target: {fileID: 100000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
       propertyPath: m_Name
       value: TeleportStart1
