@@ -8,13 +8,15 @@ public class Player_Control : MonoBehaviour {
 	public float speed;
 	public GUIText countText;
 	private int count;
+    public int health;
+    public GUIText healthText;
 
 	void Start() {
 				count = 0;
+                health = 10;
 				setCountText();
 		}
 	 //Update is called once per frame
-
 
 	void FixedUpdate() 
 	{
@@ -23,14 +25,21 @@ public class Player_Control : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		rigidbody.AddForce (movement * speed * Time.deltaTime);
 	}
-	void OnTriggerEnter(Collider other) {
+	
+    void OnTriggerEnter(Collider other) {
 				if (other.gameObject.tag == "Pickup") {
 						other.gameObject.SetActive (false);
 						count++;
 						setCountText ();
 				}
 		}
-	void setCountText() {
+	
+    void setCountText() {
 		countText.text = "Count: " + count.ToString();
 	}
+
+    void setHealthText()
+    {
+        healthText.text = "Health: " + health.ToString();
+    }
 }
