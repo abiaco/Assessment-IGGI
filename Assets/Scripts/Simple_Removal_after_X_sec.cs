@@ -10,7 +10,7 @@ public class Simple_Removal_after_X_sec : MonoBehaviour {
 		if (other.gameObject.tag == "Player")
 		{
 			Destroy(other.gameObject,Simple_TIME_LEFT);
-			
+			//It killed it dead.
 		}
 	}
 }
