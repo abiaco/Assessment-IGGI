@@ -3,14 +3,14 @@ using System.Collections;
 
 public class Floor_is_Lava : MonoBehaviour {
 
-//public float Total_Time = 5.0f;
+public float Total_Time = 5.0f;
 	// Use this for initialization
 	//OnTriggerEnter(Collider other)
 	//if (other.gameObject.tag == "Player")
 
 public float TIME_LEFT;
-
-	private bool experiment = true;
+private bool experiment = true;
+private Player_Control player;
 	
 
 
@@ -28,6 +28,21 @@ public float TIME_LEFT;
 			
 		}
 	}
+
+    void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Player_Control player = (Player_Control)other.collider.GetComponent("Player_Control");
+            player.health -= player.health / 3;
+            if (player.health < 1)
+            {
+                player.healthText.text = " ";
+                player.gameObject.SetActive(false);
+                Destroy(player);
+            }
+        }
+    }
 }
 //	void Update() {
 //

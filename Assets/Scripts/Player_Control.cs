@@ -15,6 +15,7 @@ public class Player_Control : MonoBehaviour {
 				count = 0;
                 health = 10;
 				setCountText();
+                setHealthText();
 		}
 	 //Update is called once per frame
 
