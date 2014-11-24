@@ -613,6 +613,7 @@ GameObject:
   - 92: {fileID: 599617997}
   - 124: {fileID: 599617996}
   - 81: {fileID: 599617995}
+  - 114: {fileID: 599618000}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -685,6 +686,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &599618000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599617994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a899e4de7e03c714c97e24e031fbc0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1013974535}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &809535177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1022,6 @@ GameObject:
   - 23: {fileID: 1013974536}
   - 54: {fileID: 1013974541}
   - 114: {fileID: 1013974540}
-  - 114: {fileID: 1013974542}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1103,20 +1116,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1013974542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 56e4bf5cff2a44ab394b463306082cc5,
-    type: 2}
-  m_PrefabInternal: {fileID: 2008955029}
-  m_GameObject: {fileID: 1013974535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a899e4de7e03c714c97e24e031fbc0ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 599617998}
-  offset: {x: 0, y: 10, z: -10}
 --- !u!1001 &1022482546
 Prefab:
   m_ObjectHideFlags: 0
@@ -1816,7 +1815,8 @@ Prefab:
       propertyPath: Jump_Height
       value: 400
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 56e4bf5cff2a44ab394b463306082cc5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 56e4bf5cff2a44ab394b463306082cc5, type: 2}
   m_RootGameObject: {fileID: 1013974535}
   m_IsPrefabParent: 0

@@ -3,18 +3,21 @@ using System.Collections;
 
 public class Camera_Control : MonoBehaviour {
 
-	//public GameObject player;
-    public Camera camera;
+	public GameObject player;
+    //public Camera camera;
 	public Vector3 offset;
 
 	// Use this for initialization
 	void Start () {
-		//offset = transform.position;
+		offset = transform.position;
 	}
 	
-	// Update is called once per frame
-	void LateUpdate () 
+
+	//Doesn't need to be LateUpdate here - you use LateUpdate if there's something
+	//in Update that has to happen first.
+	void Update () 
 	{
-		camera.transform.position = transform.position + offset;
+		if (player != null)
+			transform.position = player.transform.position + offset;
 	}
 }
