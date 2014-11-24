@@ -53,6 +53,7 @@ public class Player_Control : MonoBehaviour {
 		//Debug.Log ("COLLISION");
 
 		//When the player leaves the ground, this stops them jumping in mid-air
+		//---Except it doesn't! There seems to be a bug in this sometimes - particularly near walls.
 		if ((col.gameObject.name == "Ground") && first_jump_pressed == false) {
 			first_jump_pressed = true;
 		}
@@ -71,17 +72,23 @@ public class Player_Control : MonoBehaviour {
 	void OnCollisionEnter(Collision lol){
 
 		Debug.Log ("ENTRY COLLISION");
-
+		//Resets first_jump_pressed so player can jump again.
+		/*
+		 * Do we need the first_jump_pressed condition? Shouldn't we always be resetting
+		//the 'allow jump' variable when player hits the ground?
+		 */
 		if ((lol.gameObject.name == "Ground") && first_jump_pressed ==true) {
 			first_jump_pressed=false;
 		}
 	}
 
     void setCountText() {
+		//Updates Count in GUI to reflect pickup
 		countText.text = "Count: " + count.ToString();
 	}
 
     void setHealthText(){
+		//Updates Health in GUI to reflect changes.
         healthText.text = "Health: " + health.ToString();
     }
 }
