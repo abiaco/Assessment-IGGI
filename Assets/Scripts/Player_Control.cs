@@ -12,13 +12,17 @@ public class Player_Control : MonoBehaviour {
 	private float Double_Jump;
 	private bool first_jump_pressed;
 	public float Jump_Height;
-
+	public int health;
+	public GUIText healthText;
+	
 	void Start() {
-				count = 0;
-				setCountText();
+		count = 0;
+		health = 10;
+		setCountText();
+		setHealthText();
 		first_jump_pressed = false;
-
-		}
+		
+	}
 	 //Update is called once per frame
 
 
@@ -74,5 +78,11 @@ public class Player_Control : MonoBehaviour {
 		}
 	void setCountText() {
 		countText.text = "Count: " + count.ToString();
+	}
+
+	
+	void setHealthText()
+	{
+		healthText.text = "Health: " + health.ToString();
 	}
 }
