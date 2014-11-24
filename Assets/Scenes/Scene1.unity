@@ -993,6 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2f171a81d110d4d91320f868e45331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Total_Time: 5
   TIME_LEFT: 2
 --- !u!1 &1013974535
 GameObject:
@@ -1083,6 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2000
   countText: {fileID: 887396234}
+  Jump_Height: 500
   health: 0
   healthText: {fileID: 161536342}
 --- !u!54 &1013974541
@@ -1806,6 +1808,10 @@ Prefab:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 161536342}
+    - target: {fileID: 11400002, guid: 56e4bf5cff2a44ab394b463306082cc5, type: 2}
+      propertyPath: Jump_Height
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56e4bf5cff2a44ab394b463306082cc5, type: 2}
   m_RootGameObject: {fileID: 1013974535}
