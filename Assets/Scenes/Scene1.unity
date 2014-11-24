@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2000
   countText: {fileID: 887396234}
-  Jump_Height: 200
+  Jump_Height: 400
   health: 0
   healthText: {fileID: 161536342}
 --- !u!54 &1013974541
@@ -1571,7 +1571,7 @@ GameObject:
   - 114: {fileID: 1673597317}
   m_Layer: 0
   m_Name: TeleportStart1
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1626,7 +1626,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 39ee949fc758e1d41899924584852e0f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1975,7 +1975,7 @@ Prefab:
       objectReference: {fileID: 161536342}
     - target: {fileID: 11400002, guid: 56e4bf5cff2a44ab394b463306082cc5, type: 2}
       propertyPath: Jump_Height
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56e4bf5cff2a44ab394b463306082cc5, type: 2}
@@ -2084,6 +2084,14 @@ Prefab:
     - target: {fileID: 100000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
       propertyPath: m_Name
       value: TeleportStart1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 39ee949fc758e1d41899924584852e0f, type: 2}
+    - target: {fileID: 100000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
