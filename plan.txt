@@ -5,3 +5,7 @@
 directions (pendulum or whatever)
 -> enemy balls hunting the player
 
+What is the win condition?
+-Is it getting to the end of the level?
+-Collecting all the *thing* on the map?
+-Finding the one true *thing*?
