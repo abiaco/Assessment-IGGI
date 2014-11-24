@@ -14,21 +14,21 @@ private Player_Control player;
 	
 
 
-	void OnTriggerExit(Collider other) {
+/*	void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag == "Player") 
 		{
 			experiment =false;//TIME_LEFT = 100000000; //-1 will not do 
 		}
 	}
-
-	void OnTriggerStay(Collider other) {
+*/
+/*	void OnTriggerStay(Collider other) {
 		if ((other.gameObject.tag == "Player") && experiment)
 		{
 			Destroy(other.gameObject,TIME_LEFT);
 			
 		}
 	}
-
+*/
     void OnCollisionStay(Collision other)
     {
         if (other.gameObject.tag == "Player")
