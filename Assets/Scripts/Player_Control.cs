@@ -24,66 +24,64 @@ public class Player_Control : MonoBehaviour {
 		first_jump_pressed = false;
 		
 	}
-	 //Update is called once per frame
 
-		void FixedUpdate() 
-	{
+	void FixedUpdate() {
+
+		//Controls the player using standard input (WASD/Arrows) and spacebar.
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		rigidbody.AddForce (movement * speed * Time.deltaTime);
-//		Jump = Input.GetKey ("space");
 
+
+		//If spacebar is pressed and player can jump (first_jump_pressed=false), then jump
 		if (Input.GetKeyDown ("space") && first_jump_pressed == false) {
 						Debug.Log ("SPACE HAS BEEN PRESSED");
-						rigidbody.AddForce(Vector3.up * Jump_Height);
-			
+						rigidbody.AddForce(Vector3.up * Jump_Height);			
 		}
-
-
-
-			//if (first_jump_pressed == true) {
-
-
-
-		      //Replace_Vector3.up and it makes a dash !
-		//}
 
 	}
 
-    void Update()
-    {
+    void Update()    {
+		//Displays how much health is left
         setHealthText();
     }
-    	void OnCollisionExit(Collision col) {
 
-				Debug.Log ("COLLISION");
+    void OnCollisionExit(Collision col) {
+
+		//Whenever the player hits ANY collision, there's a debug statement.
+		//Debug.Log ("COLLISION");
+
+		//When the player leaves the ground, this stops them jumping in mid-air
 		if ((col.gameObject.name == "Ground") && first_jump_pressed == false) {
-						first_jump_pressed = true;
-//						if (first_jump_pressed = true) {
-//								first_jump_pressed = false;
-//						}
-				}
+			first_jump_pressed = true;
 		}
-   void OnTriggerEnter(Collider other) {
-				if (other.gameObject.tag == "Pickup") {
-						other.gameObject.SetActive (false);
-						count++;
-						setCountText ();
-				}
+	}
+
+	//When player hits pickup, disables it.
+	//NOTE: Why aren't we destroying it?
+   	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.tag == "Pickup") {
+				other.gameObject.SetActive (false);
+				count++;
+				setCountText ();
 		}
+	}
+
 	void OnCollisionEnter(Collision lol){
+
 		Debug.Log ("ENTRY COLLISION");
-			if ((lol.gameObject.name == "Ground") && first_jump_pressed ==true) {
-				first_jump_pressed=false;
-			}
+
+		if ((lol.gameObject.name == "Ground") && first_jump_pressed ==true) {
+			first_jump_pressed=false;
 		}
+	}
+
     void setCountText() {
 		countText.text = "Count: " + count.ToString();
 	}
 
-    void setHealthText()
-    {
+    void setHealthText(){
         healthText.text = "Health: " + health.ToString();
     }
 }
