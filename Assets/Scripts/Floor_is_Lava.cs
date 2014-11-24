@@ -4,10 +4,6 @@ using System.Collections;
 public class Floor_is_Lava : MonoBehaviour {
 
 public float Total_Time = 5.0f;
-	// Use this for initialization
-	//OnTriggerEnter(Collider other)
-	//if (other.gameObject.tag == "Player")
-
 public float TIME_LEFT;
 private bool experiment = true;
 private Player_Control player;
