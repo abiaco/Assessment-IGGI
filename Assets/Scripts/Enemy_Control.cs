@@ -10,6 +10,7 @@ public class Enemy_Control : MonoBehaviour
     public int health;
     public GUIText healthText;
     public Player_Control player;
+    public AudioClip punchSound;
     // Use this for initialization
     void Start()
     {
@@ -38,6 +39,7 @@ public class Enemy_Control : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             //Player_Control player = (Player_Control)other.collider.GetComponent("PlayerControl");
+            audio.PlayOneShot(punchSound);
             player.health -= power;
             setHealthText();
             if (player.health < 1)

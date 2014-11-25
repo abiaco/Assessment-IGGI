@@ -18,6 +18,7 @@ public class Player_Control : MonoBehaviour
     public GUIText healthText;
     public float MoveSpeed = 10;
     public float RotateSpeed = 40;
+    public AudioClip jumpSound;
 
     void Start()
     {
@@ -65,6 +66,7 @@ public class Player_Control : MonoBehaviour
         //---Except it doesn't! There seems to be a bug in this sometimes - particularly near walls.
         if ((col.gameObject.name == "Ground") && first_jump_pressed == false)
         {
+            audio.PlayOneShot(jumpSound);
             first_jump_pressed = true;
         }
     }
