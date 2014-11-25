@@ -1,4 +1,4 @@
-﻿
+﻿﻿
 using UnityEngine;
 using System.Collections;
 
@@ -34,7 +34,7 @@ public class Player_Control : MonoBehaviour
     {
 
         //Controls the player using standard input (WASD/Arrows) and spacebar.
-        
+
 
 
         //If spacebar is pressed and player can jump (first_jump_pressed=false), then jump
