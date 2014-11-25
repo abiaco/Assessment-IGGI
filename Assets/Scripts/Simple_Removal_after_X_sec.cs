@@ -13,4 +13,5 @@ public class Simple_Removal_after_X_sec : MonoBehaviour {
 			//It killed it dead.
 		}
 	}
+
 }

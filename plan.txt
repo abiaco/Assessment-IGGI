@@ -9,3 +9,5 @@ What is the win condition?
 -Is it getting to the end of the level?
 -Collecting all the *thing* on the map?
 -Finding the one true *thing*?
+
+We're almost there! We have a game!

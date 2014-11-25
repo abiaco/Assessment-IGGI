@@ -3,6 +3,8 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - Enemy
+  - 
   - Pickup
   - exit
   - 

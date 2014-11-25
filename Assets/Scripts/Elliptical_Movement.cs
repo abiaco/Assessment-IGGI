@@ -25,7 +25,7 @@ public class Elliptical_Movement : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 
-		if (other.gameObject.tag == "Player"){
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy"){
 			Destroy(other.gameObject);
 		}
 	}
