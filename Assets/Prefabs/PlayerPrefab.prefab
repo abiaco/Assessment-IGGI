@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -74,6 +75,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9675d21140a8b47e58dc52ea503bfac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VictoryType: 1
+  Destination: {fileID: 0}
+  ItemsToCollect: []
+  LocationsToTouch: []
+  TriggerRange: 2
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2000
   countText: {fileID: 0}
-  Jump_Height: 400
+  Jump_Height: 350
   health: 0
   healthText: {fileID: 0}
 --- !u!135 &13500000
