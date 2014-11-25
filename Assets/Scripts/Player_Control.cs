@@ -71,7 +71,7 @@ public class Player_Control : MonoBehaviour {
 
 	void OnCollisionEnter(Collision lol){
 
-		Debug.Log ("ENTRY COLLISION");
+		//Derbug.Log ("ENTRY COLLISION");
 		//Resets first_jump_pressed so player can jump again.
 		/*
 		 * Do we need the first_jump_pressed condition? Shouldn't we always be resetting
