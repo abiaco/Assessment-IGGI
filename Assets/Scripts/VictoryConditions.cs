@@ -56,5 +56,20 @@ public class VictoryConditions : MonoBehaviour {
                 Debug.Log("You win by having collected all the items!");
             }
         }
+        
+        if(VictoryType == VictoryType.TouchLocationsInOrder && LocationsToTouch.Length > 0)
+        {
+            if(ItemsCollected.Count < LocationsToTouch.Length && Vector3.Distance(transform.position, LocationsToTouch[ItemsCollected.Count].transform.position) <= TriggerRange)
+            {
+                LocationsToTouch[ItemsCollected.Count].SetActive(false);
+                ItemsCollected.Add(LocationsToTouch[ItemsCollected.Count]);
+            }
+            
+            if(ItemsCollected.Count == LocationsToTouch.Length)
+            {
+                //Victory
+                Debug.Log("You win by having touched all the locations in order!");
+            }
+        }
 	}
 }
