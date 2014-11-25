@@ -14,7 +14,7 @@ public class Enemy_Control : MonoBehaviour
     void Start()
     {
         power = 1;
-        health = 100;
+        health = 10;
         setHealthText();
     }
 
@@ -41,6 +41,7 @@ public class Enemy_Control : MonoBehaviour
             {
                 player.healthText.text = " ";
                 player.gameObject.SetActive(false);
+                Destroy(player);
             }
         }
     }
