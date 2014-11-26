@@ -20,7 +20,7 @@ public class SwitchColour : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 
-		if (other.gameObject.name == "Player") {
+		if (other.gameObject.tag == "Player") {
 			Destroy (linkedDoor);
 			//For now, I'm leaving the switch in there, just for kicks! (TC)
 			//Destroy (this.gameObject);
