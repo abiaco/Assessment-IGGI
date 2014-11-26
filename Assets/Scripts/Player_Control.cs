@@ -108,9 +108,9 @@ public class Player_Control : MonoBehaviour
             
             //Reduces Enemy health
             enemyHealth = lol.gameObject.GetComponent<Enemy_Control>();
-            enemyHealth.health -= power;
+            //enemyHealth.health -= power;
+            enemyHealth.AddjustCurrentHealth(-power);
             enemyHealth.setHealthText();
-
             //Gives a damage readout
             Instantiate(damageTextReport, lol.gameObject.transform.position + enemyDamageOffset, Quaternion.identity);
             TextMesh damage = damageTextReport.GetComponent<TextMesh>();

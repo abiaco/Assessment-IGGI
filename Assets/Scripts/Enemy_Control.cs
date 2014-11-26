@@ -45,11 +45,10 @@ public class Enemy_Control : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, 
                 player.transform.position, speed * Time.deltaTime);
         }
+
+        // adjusting health bar position.
         screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         screenPosition.y = Screen.height - screenPosition.y;
-
-        AddjustCurrentHealth(0);
-            
 
         
     }
@@ -66,10 +65,6 @@ public class Enemy_Control : MonoBehaviour
             
             //Hurt player
             player.health -= power;
-
-            
-            //Update OWN health
-            AddjustCurrentHealth(-3);
 
             setHealthText();
 
@@ -106,8 +101,6 @@ public class Enemy_Control : MonoBehaviour
      if (health < 1)
      {
          healthBarLength = 0;
-         active = false;
-         Destroy(this);
      }
      healthBarLength = (Screen.width / 16 ) * (health / (float)maxHealth);
  }
