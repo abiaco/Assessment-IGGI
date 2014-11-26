@@ -8,15 +8,20 @@ public class Enemy_Control : MonoBehaviour
     private float moveX, moveY;
     private Vector3 move;
     public int health;
-    public GUIText healthText;
+    public TextMesh healthText;
     public Player_Control player;
     public AudioClip punchSound;
+
+
     // Use this for initialization
     void Start()
     {
         power = 1;
-        health = 10;
+        health = 5;
         setHealthText();
+
+        player = GameObject.FindGameObjectWithTag("Player")
+
     }
 
     // Update is called once per frame
@@ -26,19 +31,30 @@ public class Enemy_Control : MonoBehaviour
     }
 
     void Update()
+
+       
     {
+
+        //Function following the player.
         if (player != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
-        //rigidbody.AddForce(move * speed * Time.deltaTime);
+
+
+     
+
+        
     }
 
+
     void OnCollisionEnter(Collision other)
+
+        //If enemy hits player...f
     {
         if (other.gameObject.tag == "Player")
         {
-            //Player_Control player = (Player_Control)other.collider.GetComponent("PlayerControl");
+            
             audio.PlayOneShot(punchSound);
             player.health -= power;
             setHealthText();
@@ -52,6 +68,6 @@ public class Enemy_Control : MonoBehaviour
     }
     void setHealthText()
     {
-        healthText.text = "Enemy Health: " + health.ToString();
+        healthText.text = "Health: " + health.ToString();
     }
 }
