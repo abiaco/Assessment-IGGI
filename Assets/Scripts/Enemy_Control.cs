@@ -20,7 +20,7 @@ public class Enemy_Control : MonoBehaviour
         health = 5;
         setHealthText();
 
-        player = GameObject.FindGameObjectWithTag("Player")
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 
     }
 
