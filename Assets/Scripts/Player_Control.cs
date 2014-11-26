@@ -109,4 +109,9 @@ public class Player_Control : MonoBehaviour
         //Updates Health in GUI to reflect changes.
         healthText.text = "Health: " + health.ToString();
     }
+
+	void OnDestroy () {
+		Debug.Log ("have been disabled");
+		Application.LoadLevel(Application.loadedLevelName);
+		}
 }
