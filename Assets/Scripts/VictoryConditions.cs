@@ -22,15 +22,19 @@ public class VictoryConditions : MonoBehaviour {
     public int TriggerRange = 2;
     
     private HashSet<GameObject> ItemsCollected;
+    
+    private bool Victory = false;
+    
+    public bool IsVictorious() { return Victory; }
 
 	// Use this for initialization
 	void Start () {
+        Victory = false;
         ItemsCollected = new HashSet<GameObject>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        bool Victory = false;
         if(VictoryType == VictoryType.ArriveAtDestination && Destination != null)
         {
             if(Vector3.Distance(transform.position, Destination.transform.position) <= TriggerRange)
