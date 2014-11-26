@@ -16,7 +16,7 @@ GameObject:
   - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: EnemyPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,6 +222,8 @@ MonoBehaviour:
   healthText: {fileID: 10200000}
   player: {fileID: 0}
   punchSound: {fileID: 8300000, guid: 751169a400b8b9641b20294756ea9885, type: 3}
+  damageTextReport: {fileID: 100000, guid: e5066ff5b16b95f468129bb928fda668, type: 2}
+  playerDamageOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  offset: {x: -.699999988, y: 1.20000005, z: -.5}
+  offset: {x: -.699999988, y: 1.20000005, z: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

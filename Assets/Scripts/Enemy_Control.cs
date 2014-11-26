@@ -11,24 +11,21 @@ public class Enemy_Control : MonoBehaviour
     public TextMesh healthText;
     public Player_Control player;
     public AudioClip punchSound;
+    public GameObject damageTextReport;
+    public Vector3 playerDamageOffset;
 
 
     // Use this for initialization
     void Start()
     {
-        power = 1;
-        health = 5;
+
         setHealthText();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
 
-    }
 
     void Update()
 
@@ -38,7 +35,8 @@ public class Enemy_Control : MonoBehaviour
         //Function following the player.
         if (player != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, 
+                player.transform.position, speed * Time.deltaTime);
         }
 
             
@@ -49,14 +47,26 @@ public class Enemy_Control : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
 
-        //If enemy hits player...f
+        //If enemy hits player...
     {
         if (other.gameObject.tag == "Player")
         {
-            
+            //Play combat sounds
             audio.PlayOneShot(punchSound);
+            
+            //Hurt player
             player.health -= power;
+            
+            //Update OWN health
             setHealthText();
+
+            //Get player to display damage readout
+            Instantiate(damageTextReport, other.transform.position + playerDamageOffset, Quaternion.identity);
+            TextMesh damage = damageTextReport.GetComponent<TextMesh>();
+            damage.text = power.ToString();
+
+
+            //Surely this should be on the player?! (TC)
             if (player.health < 1)
             {
                 player.healthText.text = " ";
@@ -65,7 +75,9 @@ public class Enemy_Control : MonoBehaviour
             }
         }
     }
-    void setHealthText()
+
+    //Sets health for enemyHealth text
+    public void  setHealthText()
     {
         healthText.text = "Health: " + health.ToString();
     }

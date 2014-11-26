@@ -19,6 +19,12 @@ public class Player_Control : MonoBehaviour
     public float MoveSpeed = 10;
     public float RotateSpeed = 40;
     public AudioClip jumpSound;
+    public int power;
+    public Enemy_Control enemyHealth;
+    public GameObject damageTextReport;
+    public Vector3 enemyDamageOffset;
+    
+
 
     void Start()
     {
@@ -27,6 +33,8 @@ public class Player_Control : MonoBehaviour
         setCountText();
         setHealthText();
         first_jump_pressed = false;
+
+       
 
     }
 
@@ -59,8 +67,6 @@ public class Player_Control : MonoBehaviour
     void OnCollisionExit(Collision col)
     {
 
-        //Whenever the player hits ANY collision, there's a debug statement.
-        //Debug.Log ("COLLISION");
 
         //When the player leaves the ground, this stops them jumping in mid-air
         //---Except it doesn't! There seems to be a bug in this sometimes - particularly near walls.
@@ -95,6 +101,31 @@ public class Player_Control : MonoBehaviour
         if ((lol.gameObject.name == "Ground") && first_jump_pressed == true)
         {
             first_jump_pressed = false;
+        }
+
+        if (lol.gameObject.tag == "Enemy")
+        {
+            
+            //Reduces Enemy health
+            enemyHealth = lol.gameObject.GetComponent<Enemy_Control>();
+            enemyHealth.health -= power;
+            enemyHealth.setHealthText();
+
+            //Gives a damage readout
+            Instantiate(damageTextReport, lol.gameObject.transform.position + enemyDamageOffset, Quaternion.identity);
+            TextMesh damage = damageTextReport.GetComponent<TextMesh>();
+            damage.text = power.ToString();
+
+            //Kill enemy if their health is 0
+            if (enemyHealth.health == 0) {
+
+                Debug.Log("Enemy should die!");
+
+                Destroy(lol.gameObject);
+
+            }
+            
+
         }
     }
 
