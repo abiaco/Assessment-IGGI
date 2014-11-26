@@ -111,6 +111,12 @@ public class Player_Control : MonoBehaviour
     }
 
 	void OnDestroy () {
+        VictoryConditions vc = GetComponent<VictoryConditions>();
+        if(vc!=null)
+        {
+            if(vc.IsVictorious())
+                return;
+        }
 		Debug.Log ("have been disabled");
 		Application.LoadLevel(Application.loadedLevelName);
 		}
