@@ -13,14 +13,21 @@ public class Enemy_Control : MonoBehaviour
     public AudioClip punchSound;
     public GameObject damageTextReport;
     public Vector3 playerDamageOffset;
+    public int maxHealth = 10;
+    public float healthBarLength;
+    public int healthBarWidth; 
+    public int healthBarHeight; 
+    public GUISkin healthBarSkin; 
+    public Vector3 screenPosition;
 
 
     // Use this for initialization
     void Start()
     {
-
+        
+        
         setHealthText();
-
+        healthBarLength = Screen.width / 16;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 
     }
@@ -38,7 +45,10 @@ public class Enemy_Control : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, 
                 player.transform.position, speed * Time.deltaTime);
         }
+        screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        screenPosition.y = Screen.height - screenPosition.y;
 
+        AddjustCurrentHealth(0);
             
 
         
@@ -56,8 +66,11 @@ public class Enemy_Control : MonoBehaviour
             
             //Hurt player
             player.health -= power;
+
             
             //Update OWN health
+            AddjustCurrentHealth(-3);
+
             setHealthText();
 
             //Get player to display damage readout
@@ -81,4 +94,21 @@ public class Enemy_Control : MonoBehaviour
     {
         healthText.text = "Health: " + health.ToString();
     }
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(screenPosition.x - 36, screenPosition.y - 35, Screen.width / 16, 7), "Health");
+        GUI.Box(new Rect(screenPosition.x - 36, screenPosition.y - 35, healthBarLength, 7), "Health");
+    }
+
+    public void AddjustCurrentHealth(int adj) {
+     health += adj;
+     if (health < 1)
+     {
+         healthBarLength = 0;
+         active = false;
+         Destroy(this);
+     }
+     healthBarLength = (Screen.width / 16 ) * (health / (float)maxHealth);
+ }
 }
