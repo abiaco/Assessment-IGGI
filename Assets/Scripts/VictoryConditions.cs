@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -30,12 +30,14 @@ public class VictoryConditions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        bool Victory = false;
         if(VictoryType == VictoryType.ArriveAtDestination && Destination != null)
         {
             if(Vector3.Distance(transform.position, Destination.transform.position) <= TriggerRange)
             {
                 //Victory
                 Debug.Log("You win by arriving at the destination.");
+                Victory = true;
             }
         }
         
@@ -54,6 +56,7 @@ public class VictoryConditions : MonoBehaviour {
             {
                 //Victory
                 Debug.Log("You win by having collected all the items!");
+                Victory = true;
             }
         }
         
@@ -69,7 +72,13 @@ public class VictoryConditions : MonoBehaviour {
             {
                 //Victory
                 Debug.Log("You win by having touched all the locations in order!");
+                Victory = true;
             }
+        }
+        
+        if(Victory)
+        {
+            Application.LoadLevel("MainMenu");
         }
 	}
 }
