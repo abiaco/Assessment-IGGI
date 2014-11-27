@@ -49,10 +49,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607a5bcf8aad14af0ae0704460656e3b, type: 3}
+  m_Script: {fileID: 11500000, guid: b7dff10f4f697c441bd0e94df4c41a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: Scene1
+  LevelToLoad: 
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
