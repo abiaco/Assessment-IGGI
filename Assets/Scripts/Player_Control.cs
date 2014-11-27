@@ -1,5 +1,6 @@
 ﻿﻿using UnityEngine;
 using System.Collections;
+using System;
 
 
 
@@ -91,7 +92,7 @@ public class Player_Control : MonoBehaviour
 
     void OnCollisionEnter(Collision lol)
     {
-
+        
         //Debug.Log("ENTRY COLLISION");
         //Resets first_jump_pressed so player can jump again.
         /*
@@ -105,7 +106,7 @@ public class Player_Control : MonoBehaviour
 
         if (lol.gameObject.tag == "Enemy")
         {
-            
+            DamageText("");
             //Reduces Enemy health
             enemyHealth = lol.gameObject.GetComponent<Enemy_Control>();
             //enemyHealth.health -= power;
@@ -113,7 +114,7 @@ public class Player_Control : MonoBehaviour
             enemyHealth.setHealthText();
             
             //Gives a damage readout
-            enemyHealth.DamageText(power);
+            enemyHealth.DamageText(power.ToString());
 
             //Kill enemy if their health is 0
             if (enemyHealth.health == 0) {
@@ -123,8 +124,6 @@ public class Player_Control : MonoBehaviour
                 Destroy(lol.gameObject);
 
             }
-            
-
         }
     }
 
@@ -152,7 +151,7 @@ public class Player_Control : MonoBehaviour
 		Application.LoadLevel(Application.loadedLevelName);
 	}
 
-    public void DamageText(int dmg)
+    public void DamageText(String dmg)
     {
         Instantiate(damageTextReport, transform.position + DamageOffset, Quaternion.identity);
         TextMesh damage = damageTextReport.GetComponent<TextMesh>();

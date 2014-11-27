@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Enemy_Control : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Enemy_Control : MonoBehaviour
     public Vector3 screenPosition;
 
 
+
     // Use this for initialization
     void Start()
     {
@@ -29,7 +31,6 @@ public class Enemy_Control : MonoBehaviour
         setHealthText();
         healthBarLength = Screen.width / 16;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
-
     }
 
 
@@ -57,18 +58,19 @@ public class Enemy_Control : MonoBehaviour
 
         //If enemy hits player...
     {
+        
         if (other.gameObject.tag == "Player")
         {
             //Play combat sounds
             audio.PlayOneShot(punchSound);
-            
+            DamageText("");
             //Hurt player
             player.health -= power;
 
             setHealthText();
 
             //Get player to display damage readout
-            //player.DamageText(power);
+            player.DamageText(power.ToString());
 
 
             //Surely this should be on the player?! (TC)
@@ -103,10 +105,14 @@ public class Enemy_Control : MonoBehaviour
          healthBarLength = (Screen.width / 16 ) * (health / (float)maxHealth);
     }
 
-    public void DamageText(int dmg)
+    public void DamageText(String dmg)
     {
         Instantiate(damageTextReport, transform.localPosition + DamageOffset, Quaternion.identity);
         TextMesh damage = damageTextReport.GetComponent<TextMesh>();
         damage.text = dmg.ToString();
+    }
+    void OnExit()
+    {
+        DamageText("");
     }
 }
