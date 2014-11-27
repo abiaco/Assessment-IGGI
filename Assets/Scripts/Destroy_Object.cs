@@ -8,7 +8,7 @@ public class Destroy_Object : MonoBehaviour {
 
 	void OnCollisionEnter(Collision Liz){
 		Debug.Log ("ENTRY COLLISION");
-		if (Liz.gameObject.name == "Player") {
+		if (Liz.gameObject.tag == "Player") {
 			Destroy(gameObject, Simple_TIME_LEFT);
 		}
 	}

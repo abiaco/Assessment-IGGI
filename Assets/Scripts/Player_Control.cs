@@ -12,7 +12,7 @@ public class Player_Control : MonoBehaviour
     private int count;
     private float Jump;
     private float Double_Jump;
-    private bool first_jump_pressed;
+    private bool first_jump_pressed = true;
     public float Jump_Height;
     public int health;
     public GUIText healthText;
@@ -70,7 +70,7 @@ public class Player_Control : MonoBehaviour
 
         //When the player leaves the ground, this stops them jumping in mid-air
         //---Except it doesn't! There seems to be a bug in this sometimes - particularly near walls.
-        if ((col.gameObject.name == "Ground") && first_jump_pressed == false)
+        if ((col.gameObject.tag == "Ground") && first_jump_pressed == false)
         {
             audio.PlayOneShot(jumpSound);
             first_jump_pressed = true;
@@ -98,7 +98,7 @@ public class Player_Control : MonoBehaviour
          * Do we need the first_jump_pressed condition? Shouldn't we always be resetting
         //the 'allow jump' variable when player hits the ground?
          */
-        if ((lol.gameObject.name == "Ground") && first_jump_pressed == true)
+        if ((lol.gameObject.tag == "Ground") && first_jump_pressed == true)
         {
             first_jump_pressed = false;
         }
