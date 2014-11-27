@@ -1,0 +1,38 @@
+Initialize engine version: 4.5.5f1 (7684ad0c5a44)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.4475]
+    Renderer: NVIDIA GeForce GTX 770
+    Vendor:   NVIDIA
+    VRAM:     3072 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Assessment-IGGI\game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Assessment-IGGI\game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Assessment-IGGI\game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Assessment-IGGI\game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.042 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: D:\Assessment-IGGI\game_Data\Managed\System.Core.dll (this message is harmless)
+UnloadTime: 0.282829 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 361.
+Total: 0.486466 ms (FindLiveObjects: 0.014624 ms CreateObjectMapping: 0.006346 ms MarkObjects: 0.056565 ms  DeleteObjects: 0.003035 ms)
+
+Enemy should die!
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+You win by arriving at the destination.
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 0.757983 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 125.
+Total: 13.510426 ms (FindLiveObjects: 0.004966 ms CreateObjectMapping: 0.007726 ms MarkObjects: 0.059877 ms  DeleteObjects: 13.083008 ms)
+

@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EnemyArena1.unity
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/EnemyArena1.unity
   - enabled: 1
     path: Assets/Scenes/MihailSceneSupreme.unity
   - enabled: 1
