@@ -28,6 +28,7 @@ public class Player_Control : MonoBehaviour
 
     void Start()
     {
+        Caching.CleanCache();       
         count = 0;
         health = 10;
         setCountText();
@@ -113,7 +114,7 @@ public class Player_Control : MonoBehaviour
             enemyHealth.setHealthText();
             
             //Gives a damage readout
-            //enemyHealth.DamageText(power);
+            enemyHealth.DamageText(power);
 
             //Kill enemy if their health is 0
             if (enemyHealth.health == 0) {

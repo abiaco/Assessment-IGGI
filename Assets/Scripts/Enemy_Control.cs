@@ -68,7 +68,7 @@ public class Enemy_Control : MonoBehaviour
             setHealthText();
 
             //Get player to display damage readout
-            player.DamageText(power);
+            //player.DamageText(power);
 
 
             //Surely this should be on the player?! (TC)
