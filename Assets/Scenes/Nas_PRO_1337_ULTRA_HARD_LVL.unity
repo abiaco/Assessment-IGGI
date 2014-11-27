@@ -574,7 +574,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1375355433}
   m_GameObject: {fileID: 115664545}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -1724,7 +1724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &328411080
 Prefab:
   m_ObjectHideFlags: 0
@@ -2435,7 +2435,7 @@ Prefab:
       objectReference: {fileID: 302849010}
     - target: {fileID: 400000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1c338b8df7644b9eefd32d6779d68, type: 2}
@@ -2946,7 +2946,7 @@ GameObject:
   - 23: {fileID: 599610147}
   m_Layer: 0
   m_Name: Bouncy_Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3574,7 +3574,7 @@ GameObject:
   - 23: {fileID: 817384479}
   m_Layer: 0
   m_Name: Bouncy_Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3707,7 +3707,7 @@ GameObject:
   - 23: {fileID: 838862314}
   - 114: {fileID: 838862313}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Disappearing_floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3739,7 +3739,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eec6835dc2123264aa2849fec3d36cd1, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3972,7 +3972,7 @@ GameObject:
   - 23: {fileID: 850941154}
   - 114: {fileID: 850941153}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Disappearing_floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4004,7 +4004,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eec6835dc2123264aa2849fec3d36cd1, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4045,7 +4045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
 --- !u!1 &860505669
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,7 +4108,7 @@ Transform:
   - {fileID: 1966663088}
   - {fileID: 1064655000}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!1001 &867084980
 Prefab:
   m_ObjectHideFlags: 0
@@ -4777,7 +4777,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5056,7 +5056,7 @@ GameObject:
   - 23: {fileID: 1142935125}
   - 114: {fileID: 1142935124}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Disappearing_floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5088,7 +5088,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eec6835dc2123264aa2849fec3d36cd1, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5143,7 +5143,7 @@ GameObject:
   - 23: {fileID: 1164176849}
   m_Layer: 0
   m_Name: Final_Destination
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5377,6 +5377,7 @@ GameObject:
   - 124: {fileID: 1222997730}
   - 81: {fileID: 1222997729}
   - 114: {fileID: 1222997728}
+  - 82: {fileID: 1222997734}
   m_Layer: 0
   m_Name: TopDownCamera
   m_TagString: MainCamera
@@ -5467,6 +5468,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!82 &1222997734
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 60b88a4c4773b493285102da25e77c2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 328411080}
+  m_GameObject: {fileID: 1222997727}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6d0e195b538385848a940af47a778be9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .268999994
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1245990875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,7 +5540,7 @@ GameObject:
   - 23: {fileID: 1245990877}
   - 114: {fileID: 1245990876}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Disappearing_floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5512,7 +5572,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eec6835dc2123264aa2849fec3d36cd1, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5686,6 +5746,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bc10de6cde985284989be7a7e7345e9d, type: 2}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc10de6cde985284989be7a7e7345e9d, type: 2}
   m_RootGameObject: {fileID: 1275879608}
@@ -5808,15 +5872,15 @@ MonoBehaviour:
   speed: 50
   countText: {fileID: 0}
   Jump_Height: 400
-  health: 10
+  health: 1
   healthText: {fileID: 0}
   MoveSpeed: .200000003
   RotateSpeed: 3
   jumpSound: {fileID: 8300000, guid: e75caafcb2c38ab4ca471ab55782003b, type: 3}
-  power: 0
+  power: 2
   enemyHealth: {fileID: 0}
-  damageTextReport: {fileID: 0}
-  enemyDamageOffset: {x: 0, y: 0, z: 0}
+  damageTextReport: {fileID: 100000, guid: e5066ff5b16b95f468129bb928fda668, type: 2}
+  DamageOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1275879612
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5968,7 +6032,7 @@ GameObject:
   - 23: {fileID: 1282206983}
   m_Layer: 0
   m_Name: Bouncy_Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6299,7 +6363,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6652,7 +6716,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 20.2306194
+      value: 85.2678757
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6672,7 +6736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6681,6 +6745,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
       propertyPath: Simple_TIME_LEFT
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d47c7467b89dd49a05dee73a6d6a66, type: 2}
@@ -6717,7 +6785,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6888,7 +6956,7 @@ GameObject:
   - 23: {fileID: 1401211997}
   m_Layer: 0
   m_Name: Bouncy_Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7169,7 +7237,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7651,7 +7719,7 @@ GameObject:
   - 23: {fileID: 1483898780}
   - 114: {fileID: 1483898779}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Disappearing_floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7683,7 +7751,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eec6835dc2123264aa2849fec3d36cd1, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7738,7 +7806,7 @@ GameObject:
   - 23: {fileID: 1505294516}
   m_Layer: 0
   m_Name: Bouncy_Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8097,7 +8165,7 @@ GameObject:
   - 23: {fileID: 1622151622}
   - 114: {fileID: 1622151621}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Disappearing_floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8129,7 +8197,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eec6835dc2123264aa2849fec3d36cd1, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8946,7 +9014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportPoint: {fileID: 302849010}
-  teleportSound: {fileID: 0}
+  teleportSound: {fileID: 8300000, guid: 2ac7661e1034f0c449dbe330ae1cb9bd, type: 3}
 --- !u!114 &1682717137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9000,7 +9068,7 @@ Transform:
   m_LocalScale: {x: 1.94795763, y: .201729551, z: 1.90434706}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1001 &1721280950
 Prefab:
   m_ObjectHideFlags: 0
@@ -9083,12 +9151,12 @@ Transform:
   m_PrefabInternal: {fileID: 1375355433}
   m_GameObject: {fileID: 1722749472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.948801, y: -5, z: 20.2306194}
+  m_LocalPosition: {x: 17.948801, y: -5, z: 85.2678757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 115664546}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
 --- !u!1 &1761784049
 GameObject:
   m_ObjectHideFlags: 0
@@ -10024,6 +10092,10 @@ Prefab:
       propertyPath: negative_force_Y
       value: -3000
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 7a53256464afa95488e80bc28ff54497, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a53256464afa95488e80bc28ff54497, type: 2}
   m_RootGameObject: {fileID: 1450618226}
@@ -10239,7 +10311,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
