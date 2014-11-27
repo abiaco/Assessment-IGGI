@@ -132,12 +132,14 @@ public class Player_Control : MonoBehaviour
 
     void setCountText()
     {
+        if(countText!=null)
         //Updates Count in GUI to reflect pickup
         countText.text = "Count: " + count.ToString();
     }
 
     void setHealthText()
     {
+        if(healthText!=null)
         //Updates Health in GUI to reflect changes.
         healthText.text = "Health: " + health.ToString();
     }
