@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportPoint: {fileID: 1147553655}
-  teleportSound: {fileID: 0}
+  teleportSound: {fileID: 8300000, guid: 2ac7661e1034f0c449dbe330ae1cb9bd, type: 3}
 --- !u!114 &258376911
 MonoBehaviour:
   m_ObjectHideFlags: 0
