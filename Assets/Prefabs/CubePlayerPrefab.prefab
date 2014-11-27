@@ -165,6 +165,10 @@ MonoBehaviour:
   MoveSpeed: .200000003
   RotateSpeed: 3
   jumpSound: {fileID: 8300000, guid: e75caafcb2c38ab4ca471ab55782003b, type: 3}
+  power: 2
+  enemyHealth: {fileID: 0}
+  damageTextReport: {fileID: 100000, guid: e5066ff5b16b95f468129bb928fda668, type: 2}
+  DamageOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

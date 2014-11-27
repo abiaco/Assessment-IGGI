@@ -52,6 +52,7 @@ public class Player_Control : MonoBehaviour
         {
             Debug.Log("SPACE HAS BEEN PRESSED");
             rigidbody.AddForce(Vector3.up * Jump_Height);
+            audio.PlayOneShot(jumpSound);
             first_jump_pressed = true;
         }
 
@@ -75,7 +76,7 @@ public class Player_Control : MonoBehaviour
         //---Except it doesn't! There seems to be a bug in this sometimes - particularly near walls.
         if ((col.gameObject.tag == "Ground") && first_jump_pressed == false)
         {
-            audio.PlayOneShot(jumpSound);
+            //audio.PlayOneShot(jumpSound);
             first_jump_pressed = true;
         }
     }
