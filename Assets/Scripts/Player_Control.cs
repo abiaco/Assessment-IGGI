@@ -50,6 +50,7 @@ public class Player_Control : MonoBehaviour
         {
             Debug.Log("SPACE HAS BEEN PRESSED");
             rigidbody.AddForce(Vector3.up * Jump_Height);
+            first_jump_pressed = true;
         }
 
     }
