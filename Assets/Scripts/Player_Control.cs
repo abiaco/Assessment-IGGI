@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿﻿﻿using UnityEngine;
 using System.Collections;
 using System;
 
@@ -51,6 +51,7 @@ public class Player_Control : MonoBehaviour
         {
             Debug.Log("SPACE HAS BEEN PRESSED");
             rigidbody.AddForce(Vector3.up * Jump_Height);
+            first_jump_pressed = true;
         }
 
     }
@@ -129,14 +130,16 @@ public class Player_Control : MonoBehaviour
 
     void setCountText()
     {
+        if (countText != null)
         //Updates Count in GUI to reflect pickup
-        countText.text = "Count: " + count.ToString();
+            countText.text = "Count: " + count.ToString();
     }
 
     void setHealthText()
     {
+        if (healthText != null)
         //Updates Health in GUI to reflect changes.
-        healthText.text = "Health: " + health.ToString();
+            healthText.text = "Health: " + health.ToString();
     }
 
 	void OnDestroy ()
@@ -157,5 +160,4 @@ public class Player_Control : MonoBehaviour
         TextMesh damage = damageTextReport.GetComponent<TextMesh>();
         damage.text = dmg.ToString();
     }
-
 }
