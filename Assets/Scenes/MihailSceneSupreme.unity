@@ -631,7 +631,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &350987484
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +741,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: c0e9f3288f8979e4f8779e7dbe3c65ce, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0e9f3288f8979e4f8779e7dbe3c65ce, type: 2}
@@ -1256,7 +1256,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .890462816, g: .890462816, b: .897058845, a: .760784328}
+  m_BackGroundColor: {r: .344020337, g: .344020337, b: .742647052, a: .760784328}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1321,7 +1321,7 @@ Transform:
   m_Children:
   - {fileID: 1689613304}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!23 &858188089
 Renderer:
   m_ObjectHideFlags: 0
@@ -1429,7 +1429,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: c0e9f3288f8979e4f8779e7dbe3c65ce, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0e9f3288f8979e4f8779e7dbe3c65ce, type: 2}
@@ -1602,7 +1602,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1675,7 +1675,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1792,7 +1792,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2248,6 +2248,18 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 2087778001}
+    - target: {fileID: 2000000, guid: 60b88a4c4773b493285102da25e77c2f, type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: .344020337
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 60b88a4c4773b493285102da25e77c2f, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: .344020337
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 60b88a4c4773b493285102da25e77c2f, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: .742647052
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60b88a4c4773b493285102da25e77c2f, type: 2}
   m_RootGameObject: {fileID: 833671657}
@@ -2290,7 +2302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: c0e9f3288f8979e4f8779e7dbe3c65ce, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0e9f3288f8979e4f8779e7dbe3c65ce, type: 2}
@@ -2327,7 +2339,7 @@ Transform:
   - {fileID: 1485208030}
   - {fileID: 1263946605}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!1 &1684890300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,7 +3099,7 @@ MonoBehaviour:
   power: 0
   enemyHealth: {fileID: 0}
   damageTextReport: {fileID: 0}
-  enemyDamageOffset: {x: 0, y: 0, z: 0}
+  DamageOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &2087778004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3323,7 +3335,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ea900e56349b4028bd539909a5e065e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
