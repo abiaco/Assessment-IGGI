@@ -1,5 +1,4 @@
-﻿
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using System.Collections;
 
 
@@ -159,4 +158,5 @@ public class Player_Control : MonoBehaviour
         TextMesh damage = damageTextReport.GetComponent<TextMesh>();
         damage.text = dmg.ToString();
     }
+
 }
