@@ -20,7 +20,7 @@ public class damageTextScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Code for making the text float up
         if (floatCounter < floatDistance)
         {
 
