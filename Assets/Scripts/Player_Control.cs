@@ -22,7 +22,7 @@ public class Player_Control : MonoBehaviour
     public int power;
     public Enemy_Control enemyHealth;
     public GameObject damageTextReport;
-    public Vector3 enemyDamageOffset;
+    public Vector3 DamageOffset;
     
 
 
@@ -111,10 +111,9 @@ public class Player_Control : MonoBehaviour
             //enemyHealth.health -= power;
             enemyHealth.AddjustCurrentHealth(-power);
             enemyHealth.setHealthText();
+            
             //Gives a damage readout
-            Instantiate(damageTextReport, lol.gameObject.transform.position + enemyDamageOffset, Quaternion.identity);
-            TextMesh damage = damageTextReport.GetComponent<TextMesh>();
-            damage.text = power.ToString();
+            //enemyHealth.DamageText(power);
 
             //Kill enemy if their health is 0
             if (enemyHealth.health == 0) {
@@ -141,7 +140,8 @@ public class Player_Control : MonoBehaviour
         healthText.text = "Health: " + health.ToString();
     }
 
-	void OnDestroy () {
+	void OnDestroy ()
+    {
         VictoryConditions vc = GetComponent<VictoryConditions>();
         if(vc!=null)
         {
@@ -150,5 +150,12 @@ public class Player_Control : MonoBehaviour
         }
 		Debug.Log ("have been disabled");
 		Application.LoadLevel(Application.loadedLevelName);
-		}
+	}
+
+    public void DamageText(int dmg)
+    {
+        Instantiate(damageTextReport, transform.position + DamageOffset, Quaternion.identity);
+        TextMesh damage = damageTextReport.GetComponent<TextMesh>();
+        damage.text = dmg.ToString();
+    }
 }

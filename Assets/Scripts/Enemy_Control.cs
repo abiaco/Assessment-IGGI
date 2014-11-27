@@ -12,7 +12,7 @@ public class Enemy_Control : MonoBehaviour
     public Player_Control player;
     public AudioClip punchSound;
     public GameObject damageTextReport;
-    public Vector3 playerDamageOffset;
+    public Vector3 DamageOffset;
     public int maxHealth = 10;
     public float healthBarLength;
     public int healthBarWidth; 
@@ -49,7 +49,6 @@ public class Enemy_Control : MonoBehaviour
         // adjusting health bar position.
         screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         screenPosition.y = Screen.height - screenPosition.y;
-
         
     }
 
@@ -69,9 +68,7 @@ public class Enemy_Control : MonoBehaviour
             setHealthText();
 
             //Get player to display damage readout
-            Instantiate(damageTextReport, other.transform.position + playerDamageOffset, Quaternion.identity);
-            TextMesh damage = damageTextReport.GetComponent<TextMesh>();
-            damage.text = power.ToString();
+            player.DamageText(power);
 
 
             //Surely this should be on the player?! (TC)
@@ -96,12 +93,20 @@ public class Enemy_Control : MonoBehaviour
         GUI.Box(new Rect(screenPosition.x - 36, screenPosition.y - 35, healthBarLength, 7), "Health");
     }
 
-    public void AddjustCurrentHealth(int adj) {
-     health += adj;
-     if (health < 1)
-     {
-         healthBarLength = 0;
-     }
-     healthBarLength = (Screen.width / 16 ) * (health / (float)maxHealth);
- }
+    public void AddjustCurrentHealth(int adj)
+    {
+         health += adj;
+        if (health < 1)
+        {
+           healthBarLength = 0;
+        }
+         healthBarLength = (Screen.width / 16 ) * (health / (float)maxHealth);
+    }
+
+    public void DamageText(int dmg)
+    {
+        Instantiate(damageTextReport, transform.localPosition + DamageOffset, Quaternion.identity);
+        TextMesh damage = damageTextReport.GetComponent<TextMesh>();
+        damage.text = dmg.ToString();
+    }
 }
