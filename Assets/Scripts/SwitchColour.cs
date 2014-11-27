@@ -23,7 +23,9 @@ public class SwitchColour : MonoBehaviour {
 
 		if (other.gameObject.tag == "Player") {
 			Destroy (linkedDoor);
-            audio.PlayOneShot(doorSound);
+            //Only play the open door sound if the door is there!
+            if (linkedDoor)
+                audio.PlayOneShot(doorSound);
 			//For now, I'm leaving the switch in there, just for kicks! (TC)
 			//Destroy (this.gameObject);
 		}
