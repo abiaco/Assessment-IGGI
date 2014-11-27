@@ -223,7 +223,7 @@ MonoBehaviour:
   player: {fileID: 0}
   punchSound: {fileID: 8300000, guid: 751169a400b8b9641b20294756ea9885, type: 3}
   damageTextReport: {fileID: 100000, guid: e5066ff5b16b95f468129bb928fda668, type: 2}
-  playerDamageOffset: {x: 0, y: 0, z: 0}
+  DamageOffset: {x: 0, y: 0, z: 0}
   maxHealth: 10
   healthBarLength: 0
   healthBarWidth: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  offset: {x: -1, y: 1.5, z: 0}
+  offset: {x: -1, y: 1.60000002, z: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

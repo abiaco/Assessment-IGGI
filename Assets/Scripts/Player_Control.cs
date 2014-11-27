@@ -66,6 +66,7 @@ public class Player_Control : MonoBehaviour
         transform.Translate(Vector3.forward * MoveForward);
         transform.Rotate(Vector3.up * MoveRotate);
         setHealthText();
+
     }
 
     void OnCollisionExit(Collision col)
