@@ -25,7 +25,7 @@ public class Player_Control : MonoBehaviour
     public GameObject damageTextReport;
     public Vector3 DamageOffset;
     
-
+	private bool MenuFlag = false;
 
     void Start()
     {
@@ -67,6 +67,11 @@ public class Player_Control : MonoBehaviour
         transform.Rotate(Vector3.up * MoveRotate);
         setHealthText();
 
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			MenuFlag=true;
+			Application.LoadLevel("MainMenu");
+		}
     }
 
     void OnCollisionExit(Collision col)
@@ -153,6 +158,9 @@ public class Player_Control : MonoBehaviour
             if(vc.IsVictorious())
                 return;
         }
+
+		if(MenuFlag)
+			return;
 		Debug.Log ("have been disabled");
 		Application.LoadLevel(Application.loadedLevelName);
 	}
